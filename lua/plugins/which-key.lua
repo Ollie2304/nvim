@@ -13,11 +13,11 @@ return {
 				["<leader>st"] = { name = "[S]earch [T]odo", _ = "which_key_ignore" },
 				["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
 				["<leader>t"] = { name = "[T]oggle", _ = "which_key_ignore" },
-				["<leader>h"] = { name = "Git [H]unk", _ = "which_key_ignore" },
+				["<leader>gh"] = { name = "[G]it [H]unk", _ = "which_key_ignore" },
 				["<leader>g"] = { name = "[G]it", _ = "which_key_ignore" },
 			})
 			require("which-key").register({
-				["<leader>h"] = { "Git [H]unk" },
+				["<leader>gh"] = { "[G]it [H]unk" },
 			}, { mode = "v" })
 		end,
 	},
