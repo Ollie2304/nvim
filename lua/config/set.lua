@@ -1,4 +1,4 @@
--- enable relative/line numbers 
+-- enable relative/line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -22,7 +22,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 -- sync clipboard with system clipboard
--- vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 -- centre cursor when scrolling
 vim.opt.scrolloff = 999
@@ -63,7 +63,7 @@ vim.opt.timeoutlen = 300
 
 -- display certain whitespace chars
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- set highlight line cursor is on
 vim.opt.cursorline = true
@@ -72,10 +72,10 @@ vim.opt.cursorline = true
 vim.opt.showmode = false
 
 -- highlight text on yank
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
