@@ -15,6 +15,7 @@ return {
 				["<leader>t"] = { name = "[T]oggle", _ = "which_key_ignore" },
 				["<leader>gh"] = { name = "[G]it [H]unk", _ = "which_key_ignore" },
 				["<leader>g"] = { name = "[G]it", _ = "which_key_ignore" },
+				["<leader>h"] = { name = "[H]arpoon", _ = "which_key_ignore" },
 			})
 			require("which-key").register({
 				["<leader>gh"] = { "[G]it [H]unk" },

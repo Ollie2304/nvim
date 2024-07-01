@@ -18,4 +18,5 @@ require("lazy").setup({
 	require("plugins/indent"),
 	require("plugins/undotree"),
 	require("plugins/fugitive"),
+	require("plugins/harpoon"),
 })
