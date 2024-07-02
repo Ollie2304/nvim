@@ -22,7 +22,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 -- sync clipboard with system clipboard
-vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard = "unnamedplus"
 
 -- centre cursor when scrolling
 vim.opt.scrolloff = 999
