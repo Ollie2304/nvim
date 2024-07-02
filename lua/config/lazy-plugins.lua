@@ -20,4 +20,5 @@ require("lazy").setup({
 	require("plugins/fugitive"),
 	require("plugins/harpoon"),
 	require("plugins/leap"),
+	require("plugins/trouble"),
 })
