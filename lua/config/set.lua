@@ -62,8 +62,8 @@ vim.opt.undofile = true
 vim.opt.timeoutlen = 300
 
 -- display certain whitespace chars
-vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- set highlight line cursor is on
 vim.opt.cursorline = true
