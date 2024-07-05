@@ -42,28 +42,30 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<F7>", dapui.toggle, { desc = "Debug: See last session result." })
+		vim.keymap.set("n", "<leader>dp", dapui.toggle, { desc = "Debug: See last session result." })
 
 		dap.listeners.after.event_initialized["dapui_config"] = dapui.open
 		dap.listeners.before.event_terminated["dapui_config"] = dapui.close
 		dap.listeners.before.event_exited["dapui_config"] = dapui.close
 
-		dap.adapters.gdb = {
+		dap.adapters.cppdbg = {
+			id = "cppdbg",
 			type = "executable",
-			command = "gdb",
-			args = { "-i", "dap" },
+			command = "C:/Program Files/cpptools-win64/extension/debugAdapters/bin/OpenDebugAD7.exe",
+			options = {
+				detached = false,
+			},
 		}
-
 		dap.configurations.c = {
 			{
-				name = "Launch",
-				type = "gdb",
+				name = "Launch file",
+				type = "cppdbg",
 				request = "launch",
 				program = function()
-					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "\\", "file")
 				end,
 				cwd = "${workspaceFolder}",
-				stopAtBeginningOfMainSubprogram = false,
+				stopAtEntry = true,
 			},
 		}
 	end,
