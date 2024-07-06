@@ -66,6 +66,13 @@ return {
 				end,
 				cwd = "${workspaceFolder}",
 				stopAtEntry = true,
+				setupCommands = {
+					{
+						text = "-enable-pretty-printing",
+						description = "enable pretty printing",
+						ignoreFailures = false,
+					},
+				},
 			},
 		}
 	end,
