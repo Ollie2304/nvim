@@ -48,31 +48,22 @@ return {
 		dap.listeners.before.event_terminated["dapui_config"] = dapui.close
 		dap.listeners.before.event_exited["dapui_config"] = dapui.close
 
-		dap.adapters.cppdbg = {
-			id = "cppdbg",
+		dap.adapters.gdb = {
 			type = "executable",
-			command = "C:/Program Files/cpptools-win64/extension/debugAdapters/bin/OpenDebugAD7.exe",
-			options = {
-				detached = false,
-			},
+			command = "gdb",
+			args = { "i", "dap" },
 		}
+
 		dap.configurations.c = {
 			{
-				name = "Launch file",
-				type = "cppdbg",
+				name = "Launch",
+				type = "gdb",
 				request = "launch",
 				program = function()
-					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "\\", "file")
+					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
 				end,
 				cwd = "${workspaceFolder}",
-				stopAtEntry = true,
-				setupCommands = {
-					{
-						text = "-enable-pretty-printing",
-						description = "enable pretty printing",
-						ignoreFailures = false,
-					},
-				},
+				stopAtBeginningOfMainSubprogram = false,
 			},
 		}
 	end,
