@@ -21,7 +21,6 @@ require("lazy").setup({
 	require("plugins/harpoon"),
 	require("plugins/leap"),
 	require("plugins/trouble"),
-	require("plugins/hardtime"),
 	require("plugins/notify"),
 	require("plugins/no-neck-pain"),
 })
