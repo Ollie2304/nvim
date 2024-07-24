@@ -23,9 +23,6 @@ NVIM_APPNAME=Ollie2304/nvim/ nvim
 
 ## Plugins
 
-### colorscheme
-
-+ [catppuccin/nvim](https://dotfyle.com/plugins/catppuccin/nvim)
 ### comment
 
 + [folke/todo-comments.nvim](https://dotfyle.com/plugins/folke/todo-comments.nvim)
@@ -41,6 +38,7 @@ NVIM_APPNAME=Ollie2304/nvim/ nvim
 + [folke/trouble.nvim](https://dotfyle.com/plugins/folke/trouble.nvim)
 ### editing-support
 
++ [shortcuts/no-neck-pain.nvim](https://dotfyle.com/plugins/shortcuts/no-neck-pain.nvim)
 + [windwp/nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
 ### file-explorer
 
@@ -70,6 +68,9 @@ NVIM_APPNAME=Ollie2304/nvim/ nvim
 ### lsp-installer
 
 + [williamboman/mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)
+### lua-colorscheme
+
++ [ellisonleao/gruvbox.nvim](https://dotfyle.com/plugins/ellisonleao/gruvbox.nvim)
 ### marks
 
 + [ThePrimeagen/harpoon](https://dotfyle.com/plugins/ThePrimeagen/harpoon)
@@ -100,9 +101,6 @@ NVIM_APPNAME=Ollie2304/nvim/ nvim
 ### utility
 
 + [rcarriga/nvim-notify](https://dotfyle.com/plugins/rcarriga/nvim-notify)
-### workflow
-
-+ [m4xshen/hardtime.nvim](https://dotfyle.com/plugins/m4xshen/hardtime.nvim)
 ## Language Servers
 
 + clangd
