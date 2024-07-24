@@ -1,10 +1,10 @@
 return {
-	"ellisonleao/gruvbox.nvim",
-	name = "gruvbox",
+	"catppuccin/nvim",
+	name = "catppuccin",
 	priority = 1000,
 
 	config = function()
-		vim.cmd.colorscheme("gruvbox")
+		vim.cmd.colorscheme("catppuccin")
 		vim.opt.background = "dark"
 	end,
 }
