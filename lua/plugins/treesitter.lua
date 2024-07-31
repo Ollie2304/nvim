@@ -15,7 +15,6 @@ return {
 				"vimdoc",
 				"query",
 				"javascript",
-				"hyprlang",
 			},
 			auto_install = true,
 			highlight = {
@@ -27,8 +26,6 @@ return {
 			require("nvim-treesitter.install").prefer_git = true
 			require("nvim-treesitter.configs").setup(opts)
 		end,
-		vim.filetype.add({
-			pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
-		}),
+		vim.filetype.add({}),
 	},
 }

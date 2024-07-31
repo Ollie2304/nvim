@@ -77,19 +77,12 @@ return {
 					},
 				},
 				clangd = {},
-				require("lspconfig").hyprls.setup({
-					cmd = { "hyprls", "--stdio" },
-					{ "hyprlang", "*.hl", "hypr*.conf", ".config/hypr/*.conf" },
-					root_dir = require("lspconfig").util.find_git_ancestor,
-					single_file_support = true,
-				}),
 			}
 			require("mason").setup()
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua",
 				"clangd",
-				"hyprls",
 				"lua-language-server",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
