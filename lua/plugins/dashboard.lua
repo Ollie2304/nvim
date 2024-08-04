@@ -12,6 +12,7 @@ return {
 					shortcut = {
 						{ desc = "Update", group = "@property", action = "Lazy update", key = "u" },
 						{ desc = "Sync", group = "@property", action = "Lazy sync", key = "s" },
+						{ desc = "Check Health", group = "@property", action = "checkhealth", key = "h" },
 						{ desc = "Files", group = "Label", action = "Telescope find_files", key = "sf" },
 					},
 				},
