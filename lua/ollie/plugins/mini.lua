@@ -24,7 +24,7 @@ require("mini.comment").setup()
 require("mini.completion").setup({
     lsp_completion = {
         auto_setup = true,
-    }
+    },
 })
 
 -- mini.keymap - Special key mappings
@@ -47,8 +47,8 @@ require("mini.operators").setup()
 -- mini.pairs - Autopairs
 require("mini.pairs").setup({
     modes = {
-        command = true
-    }
+        command = true,
+    },
 })
 
 -- mini.snippets - Manage and expand snippets
@@ -67,7 +67,7 @@ MiniSnippets.setup({
         -- load snippets/global.json
         MiniSnippets.gen_loader.from_file(config_path .. "/snippets/global.json"),
         -- load from snippets/ directory
-        MiniSnippets.gen_loader.from_lang({ lang_patterns = lang_patterns  }),
+        MiniSnippets.gen_loader.from_lang({ lang_patterns = lang_patterns }),
     },
 })
 MiniSnippets.start_lsp_server({ match = false }) -- expose snippets to mini completion
@@ -78,7 +78,6 @@ require("mini.splitjoin").setup()
 -- mini.surround - Surround actions
 require("mini.surround").setup()
 
-
 -- General  ===================================================================
 
 -- mini.basics - Common configuration presets
@@ -88,7 +87,7 @@ require("mini.basics").setup({
         basics = true,
         window = true,
         move_with_alt = true,
-    }
+    },
 })
 
 -- mini.bracketed - Go forward/backward with square brackets
@@ -125,7 +124,7 @@ MiniClue.setup({
         MiniClue.gen_clues.registers(),
         MiniClue.gen_clues.windows({ submode_resize = true }),
         MiniClue.gen_clues.z(),
-  },
+    },
 
     triggers = {
         { mode = { "n", "x" }, keys = "<Leader>" }, -- Leader
@@ -136,12 +135,11 @@ MiniClue.setup({
         { mode = { "n", "x" }, keys = "g" }, -- g
         { mode = { "n", "x" }, keys = "'" }, -- Marks
         { mode = { "n", "x" }, keys = "`" },
-        { mode = { "n", "x" }, keys = "\"" }, -- Registers
+        { mode = { "n", "x" }, keys = '"' }, -- Registers
         { mode = { "i", "c" }, keys = "<C-r>" },
         { mode = "n", keys = "<C-w>" }, -- Window
         { mode = { "n", "x" }, keys = "z" }, -- z
         { mode = { "n", "x" }, keys = "s" }, -- s (mini.surround)
-
     },
 })
 
@@ -157,8 +155,8 @@ MiniExtra.setup()
 -- Files
 require("mini.files").setup({
     windows = {
-        preview = true
-    }
+        preview = true,
+    },
 })
 
 -- Git
@@ -220,20 +218,20 @@ MiniAnimate.setup({
 
 -- mini.cursorword - Autohighlight word under cursor
 require("mini.cursorword").setup({
-    delay = 0
+    delay = 0,
 })
 
 -- mini.hipatterns - Highlight patterns in text
 local HiPatterns = require("mini.hipatterns")
 HiPatterns.setup({
     highlighters = {
-        fixme = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
-        hack  = { pattern = '%f[%w]()HACK()%f[%W]',  group = 'MiniHipatternsHack'  },
-        todo  = { pattern = '%f[%w]()TODO()%f[%W]',  group = 'MiniHipatternsTodo'  },
-        note  = { pattern = '%f[%w]()NOTE()%f[%W]',  group = 'MiniHipatternsNote'  },
+        fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
+        hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
+        todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
+        note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
 
         hex_color = HiPatterns.gen_highlighter.hex_color(),
-    }
+    },
 })
 
 -- mini.icons - Icon provider
@@ -242,8 +240,8 @@ require("mini.icons").setup()
 -- mini.identscope - Visualize and work with indent scope
 require("mini.indentscope").setup({
     draw = {
-        delay = 0
-    }
+        delay = 0,
+    },
 })
 
 -- mini.notify - Show notifications
@@ -252,7 +250,7 @@ require("mini.notify").setup({
         format = function(notif)
             return notif.msg
         end,
-    }
+    },
 })
 
 -- mini.starter Start screen
@@ -264,8 +262,8 @@ MiniStarter.setup({
         MiniStarter.sections.builtin_actions(),
         MiniStarter.sections.sessions(5, true),
         MiniStarter.sections.recent_files(3, false),
-        MiniStarter.sections.recent_files(3, true)
-    }
+        MiniStarter.sections.recent_files(3, true),
+    },
 })
 
 -- mini.statusline - Statusline

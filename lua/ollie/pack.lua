@@ -1,4 +1,6 @@
-local gh = function(x) return 'https://github.com/' .. x end
+local gh = function(x)
+    return "https://github.com/" .. x
+end
 local add = vim.pack.add
 
 add({
@@ -11,7 +13,6 @@ add({
     gh("mason-org/mason.nvim"),
     gh("mason-org/mason-lspconfig.nvim"),
     gh("stevearc/conform.nvim"),
-
 })
 
 require("ollie.plugins.mini")

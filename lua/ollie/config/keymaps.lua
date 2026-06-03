@@ -19,6 +19,7 @@ local xmap_leader = function(suffix, rhs, desc)
     vim.keymap.set("x", "<Leader>" .. suffix, rhs, { desc = desc })
 end
 
+-- stylua: ignore start
 -- General  ===================================================================
 -- keep cursor still when using "J"
 nmap("J", "mzJ`z`")
@@ -171,3 +172,5 @@ nmap_leader("vv", "<Cmd>lua MiniVisits.add_label('core')<CR>",    "Add 'core' la
 nmap_leader("vV", "<Cmd>lua MiniVisits.remove_label('core')<CR>", "Remove 'core' label")
 nmap_leader("vl", "<Cmd>lua MiniVisits.add_label()<CR>",          "Add label")
 nmap_leader("vL", "<Cmd>lua MiniVisits.remove_label()<CR>",       "Remove label")
+
+-- stylua: ignore end

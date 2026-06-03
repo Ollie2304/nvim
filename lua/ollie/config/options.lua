@@ -100,4 +100,3 @@ vim.o.completetimeout = 100                             -- limit sources delay
 vim.opt.shortmess:append("c")                           -- hide completion messages from CL
 
 -- stylua: ignore end
-
