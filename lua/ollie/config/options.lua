@@ -10,6 +10,8 @@ vim.o.swapfile    = false -- disable swapfile
 vim.o.undofile    = true  -- persistent undo
 vim.o.undodir     = home .. "/.vim/undodir" -- undo directory
 
+vim.o.confirm     = true  -- prompt to save unsaved changes
+
 
 vim.o.shada = "'100,<50,s10,:1000,/100,@100,h" -- limit shada file
 
