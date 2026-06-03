@@ -50,19 +50,7 @@ vim.lsp.config("lua_ls", {
     },
 })
 vim.lsp.enable({
-    "vimls",
-    "lua_ls",
-    "stylua",
-    "pyrefly",
-    "ruff",
-    "marksman",
-    "mdformat",
-    "markdownlint",
-    "biome",
-    "json-lsp",
-    "lemminx",
-    "tombi",
-    "yamlls"
+    -- see mason
 })
 
 -- Formatting  ================================================================
@@ -91,5 +79,8 @@ require("mason-lspconfig").setup({
         "marksman",
         "biome",
         "jsonls",
+        "lemminx",
+        "tombi",
+        "yamlls"
     }
 })
