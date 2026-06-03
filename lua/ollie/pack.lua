@@ -6,12 +6,15 @@ local add = vim.pack.add
 add({
     gh("nyoom-engineering/oxocarbon.nvim"),
     gh("nvim-mini/mini.nvim"),
-    gh("rafamadriz/friendly-snippets"),
+
     gh("nvim-treesitter/nvim-treesitter"),
     gh("nvim-treesitter/nvim-treesitter-textobjects"),
-    gh("neovim/nvim-lspconfig"),
+
     gh("mason-org/mason.nvim"),
+    gh("neovim/nvim-lspconfig"),
     gh("mason-org/mason-lspconfig.nvim"),
+
+    gh("rafamadriz/friendly-snippets"),
     gh("stevearc/conform.nvim"),
 })
 
