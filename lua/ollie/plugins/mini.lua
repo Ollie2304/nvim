@@ -235,7 +235,12 @@ HiPatterns.setup({
 })
 
 -- mini.icons - Icon provider
-require("mini.icons").setup()
+local MiniIcons = require("mini.icons")
+MiniIcons.setup()
+-- enable icons for autocomplete
+MiniMisc.safely("later", function()
+    MiniIcons.tweak_lsp_kind()
+end)
 
 -- mini.identscope - Visualize and work with indent scope
 require("mini.indentscope").setup({
