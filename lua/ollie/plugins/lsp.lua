@@ -8,6 +8,9 @@ local ensure_installed = {
     "python",
     "c",
     "json",
+    "yaml",
+    "toml",
+    "xml",
 }
 
 treesitter.install(ensure_installed)
@@ -57,6 +60,9 @@ vim.lsp.enable({
     "markdownlint",
     "biome",
     "json-lsp",
+    "lemminx",
+    "tombi",
+    "yamlls"
 })
 
 -- Formatting  ================================================================
