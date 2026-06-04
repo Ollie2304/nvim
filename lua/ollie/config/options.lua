@@ -72,9 +72,9 @@ vim.g.netrw_banner = 0
 -- Editor =====================================================================
 vim.o.tabstop     = 4    -- tab width
 vim.o.shiftwidth  = 4    -- indent width
-vim.o.softtabstop = 4    -- soft tab stops 
+vim.o.softtabstop = 4    -- soft tab stops
 vim.o.expandtab   = true -- use spaces instead of tabs
-vim.o.smartindent = true -- smart autoindent 
+vim.o.smartindent = true -- smart autoindent
 vim.o.autoindent  = true -- copy indent on new line
 
 vim.o.ignorecase = true    -- case-insensitive search
