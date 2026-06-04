@@ -5,7 +5,6 @@ local add = vim.pack.add
 
 add({
     gh("nyoom-engineering/oxocarbon.nvim"),
-    gh("nvim-mini/mini.nvim"),
 
     gh("nvim-treesitter/nvim-treesitter"),
     gh("nvim-treesitter/nvim-treesitter-textobjects"),
