@@ -19,6 +19,8 @@ local xmap_leader = function(suffix, rhs, desc)
     vim.keymap.set("x", "<Leader>" .. suffix, rhs, { desc = desc })
 end
 
+local MiniExtra = require("mini.extra")
+
 -- stylua: ignore start
 -- General  ===================================================================
 -- keep cursor still when using "J"
@@ -104,8 +106,11 @@ nmap_leader("fs", pick_workspace_symbols_live,                  "Symbols workspa
 nmap_leader("fS", "<Cmd>Pick lsp scope='document_symbol'<CR>",  "Symbols document")
 nmap_leader("fv", "<Cmd>Pick visit_paths cwd=''<CR>",           "Visit paths (all)")
 nmap_leader("fV", "<Cmd>Pick visit_paths<CR>",                  "Visit paths (cwd)")
-nmap_leader("fk", "<Cmd>Pick keymaps<CR>", "Keymaps")
-
+nmap_leader("fk", "<Cmd>Pick keymaps<CR>",                      "Keymaps")
+nmap_leader("ft", "<Cmd> Pick hipatterns<CR>",                  "Todo list")
+nmap_leader("fT", function()
+  MiniExtra.pickers.hipatterns({ scope = "current" })
+end,                                                            "Todo list (buffer)")
 -- Git ========================================================================
 local git_log_cmd = [[Git log --pretty=format:\%h\ \%as\ │\ \%s --topo-order]]
 local git_log_buf_cmd = git_log_cmd .. " --follow -- %"
@@ -157,7 +162,6 @@ nmap_leader("tT", "<Cmd>horizontal term<CR>", "Terminal (horizontal)")
 nmap_leader("tt", "<Cmd>vertical term<CR>",   "Terminal (vertical)")
 
 -- Visits  ====================================================================
-local MiniExtra = require("mini.extra")
 local MiniVisits = require("mini.visits")
 local make_pick_core = function(cwd, desc)
   return function()
