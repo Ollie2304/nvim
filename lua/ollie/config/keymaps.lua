@@ -173,4 +173,18 @@ nmap_leader("vV", "<Cmd>lua MiniVisits.remove_label('core')<CR>", "Remove 'core'
 nmap_leader("vl", "<Cmd>lua MiniVisits.add_label()<CR>",          "Add label")
 nmap_leader("vL", "<Cmd>lua MiniVisits.remove_label()<CR>",       "Remove label")
 
+local sort_latest = MiniVisits.gen_sort.default({ recency_weight = 1 })
+
+local map_iterate_core = function(lhs, direction, desc)
+  local opts = { filter = "core", sort = sort_latest, wrap = true }
+  local rhs = function()
+    MiniVisits.iterate_paths(direction, vim.fn.getcwd(), opts)
+  end
+  vim.keymap.set("n", lhs, rhs, { desc = desc })
+end
+
+map_iterate_core("[[", "forward",  "Core label (earlier)")
+map_iterate_core("]]", "backward", "Core label (later)")
+map_iterate_core("[{", "last",     "Core label (earliest)")
+map_iterate_core("]}", "first",    "Core label (latest)")
 -- stylua: ignore end
