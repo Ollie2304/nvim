@@ -274,8 +274,5 @@ MiniStarter.setup({
 -- mini.statusline - Statusline
 require("mini.statusline").setup()
 
--- mini.tabline Tabline
-require("mini.tabline").setup()
-
 -- mini.trailspace - Trailspace (highlight and remove)
 require("mini.trailspace").setup()
