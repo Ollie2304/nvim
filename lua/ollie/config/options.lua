@@ -110,3 +110,7 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = "help",
     command = "wincmd L",
 })
+-- resize splits when terminal is resized
+vim.api.nvim_create_autocmd("VimResized", {
+    command = "wincmd =",
+})
