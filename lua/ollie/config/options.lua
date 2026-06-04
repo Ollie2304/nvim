@@ -99,7 +99,6 @@ vim.o.formatlistpat = [[^\s*[0-9\-\+\*]\+[\.\)]*\s\+]]
 vim.o.complete        = ".,w,b,kspell"                  -- use less sources
 vim.o.completeopt     = "menuone,noselect,fuzzy,nosort" -- completion menu
 vim.o.completetimeout = 100                             -- limit sources delay
-vim.opt.shortmess:append("c")                           -- hide completion messages from CL
 
 -- stylua: ignore end
 
@@ -121,3 +120,24 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt_local.formatoptions:remove({ "c", "r", "o" })
     end,
 })
+
+-- Diagnostics ================================================================
+
+local diagnostic_opts = {
+  -- show signs on top of any other sign, but only for warnings and errors
+  signs = { priority = 9999, severity = { min = 'WARN', max = 'ERROR' } },
+
+  -- show all diagnostics as underline (for their messages type `<Leader>ld`)
+  underline = { severity = { min = 'HINT', max = 'ERROR' } },
+
+  -- show more details immediately for errors on the current line
+  virtual_lines = false,
+  virtual_text = {
+    current_line = true,
+    severity = { min = 'ERROR', max = 'ERROR' },
+  },
+
+  -- don't update diagnostics when typing
+  update_in_insert = false,
+}
+Config.later(function() vim.diagnostic.config(diagnostic_opts) end)
