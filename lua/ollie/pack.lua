@@ -12,6 +12,7 @@ add({
     gh("mason-org/mason.nvim"),
     gh("neovim/nvim-lspconfig"),
     gh("mason-org/mason-lspconfig.nvim"),
+    gh("WhoIsSethDaniel/mason-tool-installer.nvim"),
 
     gh("rafamadriz/friendly-snippets"),
     gh("stevearc/conform.nvim"),

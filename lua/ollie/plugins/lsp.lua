@@ -6,13 +6,15 @@ now_if_args(function()
     local ensure_installed = {
         "lua",
         "vimdoc",
-        "markdown",
         "python",
         "c",
+        "markdown",
         "json",
         "yaml",
         "toml",
         "xml",
+        "javascript",
+        "typescript",
     }
 
     treesitter.install(ensure_installed)
@@ -57,6 +59,34 @@ now_if_args(function()
         },
     })
 end)
+
+now_if_args(function()
+    require("mason-tool-installer").setup({
+        ensure_installed = {
+            "vimls",
+            "lua_ls",
+            "luacheck",
+            "stylua",
+            "markdownlint",
+            "marksman",
+            "mdformat",
+            "json-lsp",
+            "yamlls",
+            "tombi",
+            "lemminx",
+            "xmlformatter",
+            "ruff",
+            "pyrefly",
+            "biome",
+            "prettier",
+            "clangd",
+            "clang-format",
+        },
+        auto_update = false,
+        run_on_start = false,
+    })
+end)
+
 -- Language servers  ==========================================================
 now_if_args(function()
     vim.diagnostic.config({ virtual_text = true })
@@ -87,7 +117,15 @@ later(function()
             lua = { "stylua" },
             python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
             markdown = { "mdformat", "markdownlint" },
-            json = { "biome" },
+            json = { "biome-check" },
+            yaml = { "prettier" },
+            toml = { "tombi" },
+            xml = { "xmlformatter" },
+            html = { "prettier" },
+            css = { "biome-check" },
+            javascript = { "biome-check" },
+            typescript = { "biome-check" },
+            c = { "clang-format" },
         },
     })
 end)
