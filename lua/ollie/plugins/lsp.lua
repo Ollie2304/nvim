@@ -15,6 +15,7 @@ now_if_args(function()
         "xml",
         "javascript",
         "typescript",
+        "bash",
     }
 
     treesitter.install(ensure_installed)
@@ -56,6 +57,7 @@ now_if_args(function()
             "lemminx",
             "tombi",
             "yamlls",
+            "bashls",
         },
     })
 end)
@@ -81,6 +83,8 @@ now_if_args(function()
             "prettier",
             "clangd",
             "clang-format",
+            "bashls",
+            "beautysh",
         },
         auto_update = false,
         run_on_start = false,
@@ -126,6 +130,7 @@ later(function()
             javascript = { "biome-check" },
             typescript = { "biome-check" },
             c = { "clang-format" },
+            bash = { "beautysh" },
         },
     })
 end)
