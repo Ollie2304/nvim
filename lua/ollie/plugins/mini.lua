@@ -260,6 +260,11 @@ later(function()
     require("mini.visits").setup()
 end)
 
+-- Input
+now_if_args(function()
+    require("mini.input").setup()
+end)
+
 -- Appearance  ================================================================
 
 -- Animate
