@@ -370,6 +370,11 @@ now(function()
     require("mini.statusline").setup()
 end)
 
+-- mini.statuscolumn - Statuscolumn
+now_if_args(function()
+    require("mini.statuscolumn").setup()
+end)
+
 -- mini.trailspace - Trailspace (highlight and remove)
 later(function()
     require("mini.trailspace").setup()

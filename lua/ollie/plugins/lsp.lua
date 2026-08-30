@@ -16,6 +16,7 @@ now_if_args(function()
         "javascript",
         "typescript",
         "bash",
+        "rust",
     }
 
     treesitter.install(ensure_installed)
@@ -58,6 +59,7 @@ now_if_args(function()
             "tombi",
             "yamlls",
             "bashls",
+            "rust_analyzer"
         },
     })
 end)
@@ -85,6 +87,7 @@ now_if_args(function()
             "clang-format",
             "bashls",
             "beautysh",
+            "rust_analyzer"
         },
         auto_update = false,
         run_on_start = false,
